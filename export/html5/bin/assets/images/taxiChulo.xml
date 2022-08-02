@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="taxiChulo.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="motoMami0000" x="0" y="0" width="675" height="514"/>
+	<SubTexture name="motoMami0001" x="0" y="0" width="675" height="514"/>
+	<SubTexture name="motoMami0002" x="0" y="514" width="569" height="451" frameX="-8" frameY="-50" frameWidth="675" frameHeight="514"/>
+	<SubTexture name="motoMami0003" x="0" y="514" width="569" height="451" frameX="-8" frameY="-50" frameWidth="675" frameHeight="514"/>
+</TextureAtlas>
