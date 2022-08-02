@@ -29,19 +29,19 @@ class PlayState extends FlxState
 		stageGrp = new FlxTypedGroup<FlxSprite>();
 		add(stageGrp);
 
-		sky = new FlxSprite(0, -700);
+		sky = new FlxSprite(0, -450);
 		sky.loadGraphic(Paths.image('sky'));
-		sky.screenCenter();
+		sky.screenCenter(X);
 		sky.scrollFactor.set(0.85, 0.85);
 		stageGrp.add(sky);
 
-		mountains = new FlxSprite(0, -30);
+		mountains = new FlxSprite(0, -300);
 		mountains.loadGraphic(Paths.image('mountains'));
 		mountains.scrollFactor.set(0.90, 0.90);
 		mountains.screenCenter(X);
 		stageGrp.add(mountains);
 
-		sun = new FlxSprite(0, -100);
+		sun = new FlxSprite(0, -500);
 		sun.loadGraphic(Paths.image('sol'));
 		stageGrp.add(sun);
 
@@ -51,7 +51,6 @@ class PlayState extends FlxState
 		grass = new FlxSprite(0, 50);
 		grass.loadGraphic(Paths.image('grass'));
 		grass.screenCenter(X);
-		grass.updateHitbox();
 		grass.immovable = true;
 		stageGrp.add(grass);
 
