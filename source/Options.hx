@@ -31,7 +31,6 @@ class Options extends FlxState
 		handCursor.updateHitbox();
 		handCursor.setPosition(FlxG.mouse.x, FlxG.mouse.y);
 		handCursor.antialiasing = true;
-		add(handCursor);
 
 		bg = new FlxSprite(0).loadGraphic(Paths.image('table'));
 		bg.setGraphicSize(Std.int(bg.width * 1));

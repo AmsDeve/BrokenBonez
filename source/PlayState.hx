@@ -28,21 +28,24 @@ class PlayState extends FlxState
 		stageGrp = new FlxTypedGroup<FlxSprite>();
 		add(stageGrp);
 
-		sky = new FlxSprite();
+		sky = new FlxSprite(0, -700);
 		sky.loadGraphic(Paths.image('sky'));
 		sky.screenCenter();
 		sky.scrollFactor.set(0.85, 0.85);
 		stageGrp.add(sky);
 
-		mountains = new FlxSprite(0, 15);
+		mountains = new FlxSprite(0, -30);
 		mountains.loadGraphic(Paths.image('mountains'));
 		mountains.scrollFactor.set(0.90, 0.90);
 		mountains.screenCenter(X);
 		stageGrp.add(mountains);
 
-		sun = new FlxSprite(0, 0);
+		sun = new FlxSprite(0, -100);
 		sun.loadGraphic(Paths.image('sol'));
 		stageGrp.add(sun);
+
+		player = new BykePlayer(0, -400);
+		add(player);
 
 		grass = new FlxSprite(0, 50);
 		grass.loadGraphic(Paths.image('grass'));
@@ -51,9 +54,6 @@ class PlayState extends FlxState
 		grass.immovable = true;
 		stageGrp.add(grass);
 
-		player = new BykePlayer(0, 0);
-		add(player);
-
 		FlxG.camera.follow(player, TOPDOWN, 1);
 	}
 
@@ -61,5 +61,10 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 		FlxG.collide(player, grass);
+
+		if (FlxG.keys.justPressed.R)
+		{
+			FlxG.switchState(new PlayState());
+		}
 	}
 }

@@ -3,6 +3,7 @@ package;
 import flixel.*;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 
 class LevelSelector extends FlxState
 {
@@ -20,7 +21,6 @@ class LevelSelector extends FlxState
 		handCursor.updateHitbox();
 		handCursor.setPosition(FlxG.mouse.x, FlxG.mouse.y);
 		handCursor.antialiasing = true;
-		add(handCursor);
 
 		level1 = new FlxText(60, 100, 'level 1', 54);
 		add(level1);

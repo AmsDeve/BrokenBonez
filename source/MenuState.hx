@@ -34,7 +34,6 @@ class MenuState extends FlxState
 		handCursor.updateHitbox();
 		handCursor.setPosition(FlxG.mouse.x, FlxG.mouse.y);
 		handCursor.antialiasing = true;
-		add(handCursor);
 
 		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xFF1D1D1D);
 		add(bg);

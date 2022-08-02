@@ -63,10 +63,6 @@ class BykePlayer extends FlxSprite
 			if (FlxG.keys.anyJustPressed([SPACE, UP, W]))
 			{
 				animation.play('trick');
-				if (animation.curAnim.name == 'trick' && animation.curAnim.finished)
-				{
-					animation.play('acelerate');
-				}
 			}
 		}
 		if (jumpR)
@@ -88,5 +84,10 @@ class BykePlayer extends FlxSprite
 		jump(elapsed);
 		moveByke();
 		super.update(elapsed);
+
+		if (animation.curAnim.name == 'trick' && animation.curAnim.finished)
+		{
+			animation.play('acelerate');
+		}
 	}
 }
