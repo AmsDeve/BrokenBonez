@@ -12,11 +12,12 @@ import flixel.util.FlxColor;
 
 class PlayState extends FlxState
 {
-	var player:BykePlayer;
+	public static var player:BykePlayer;
 
 	var stageGrp:FlxTypedGroup<FlxSprite>;
 
-	var grass:FlxSprite;
+	public static var grass:FlxSprite;
+
 	var sky:FlxSprite;
 	var mountains:FlxSprite;
 	var sun:FlxSprite;
