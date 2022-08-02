@@ -22,13 +22,13 @@ class LevelSelector extends FlxState
 		handCursor.antialiasing = true;
 		add(handCursor);
 
-		level1 = new FlxText(40, 100, 'level 1', 24);
+		level1 = new FlxText(60, 100, 'level 1', 54);
 		add(level1);
 
-		level2 = new FlxText(40, 200, 'level 2', 24);
+		level2 = new FlxText(60, 200, 'level 2', 54);
 		add(level2);
 
-		level3 = new FlxText(40, 300, 'level 3', 24);
+		level3 = new FlxText(60, 300, 'level 3', 54);
 		add(level3);
 	}
 
