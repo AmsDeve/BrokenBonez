@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="proShit.png">
-	<!-- Created with Adobe Animate version 21.0.0.35450 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="face instancia 10000" x="0" y="0" width="512" height="521"/>
-	<SubTexture name="faceboock selec instancia 10000" x="512" y="0" width="1546" height="1559"/>
-	<SubTexture name="goggle select instancia 10000" x="2058" y="0" width="912" height="922"/>
-	<SubTexture name="googl instancia 10000" x="2970" y="0" width="512" height="522"/>
-</TextureAtlas>
