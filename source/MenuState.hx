@@ -24,8 +24,6 @@ class MenuState extends FlxState
 
 	var handCursor:FlxSprite;
 
-	var crtleShader = new shaders.TvThingShader();
-
 	override public function create()
 	{
 		super.create();
@@ -70,6 +68,14 @@ class MenuState extends FlxState
 		settingsSelected.alpha = 0;
 		add(settingsSelected);
 
+		var textName = new FlxText(bike.x + 150, 220, '', 45);
+
+		if (FlxG.save.data.UglyName)
+		{
+			textName.text = FlxG.save.data.NickName;
+		}
+		add(textName);
+
 		bgBrightness = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 
 		if (FlxG.save.data.BrightNess)
@@ -79,6 +85,7 @@ class MenuState extends FlxState
 		add(bgBrightness);
 
 		bgBrightness.alpha = FlxG.save.data.BrightNessAlpha;
+		textName.text = FlxG.save.data.NickName;
 	}
 
 	override public function update(elapsed:Float)

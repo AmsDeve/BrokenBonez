@@ -85,7 +85,7 @@ class BykePlayer extends FlxSprite
 		moveByke();
 		super.update(elapsed);
 
-		if (FlxG.collide(PlayState.player, PlayState.grass))
+		if (animation.curAnim.name == 'trick' && FlxG.collide(PlayState.player, PlayState.grass))
 		{
 			animation.play('acelerate');
 		}

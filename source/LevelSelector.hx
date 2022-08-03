@@ -36,8 +36,8 @@ class LevelSelector extends FlxState
 	{
 		super.update(tilin);
 
-		FlxG.mouse.load(handCursor.pixels, 0.1);
-		FlxG.mouse.visible = true;
+		// FlxG.mouse.load(handCursor.pixels, 0.1);
+		// FlxG.mouse.visible = true;
 
 		if (FlxG.mouse.overlaps(level1))
 		{

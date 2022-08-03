@@ -13,6 +13,8 @@ class UserName extends FlxSubState
 	var facebook:FlxSprite;
 	var google:FlxSprite;
 
+	var NULL = '';
+
 	public function new()
 	{
 		super();
@@ -25,7 +27,7 @@ class UserName extends FlxSubState
 		coolText.screenCenter(X);
 		add(coolText);
 
-		name = new FlxUIInputText(0, 250, 500, '', 50);
+		name = new FlxUIInputText(0, 250, 500, 'Player', 50);
 		name.screenCenter(X);
 
 		if (FlxG.save.data.UglyName)
@@ -64,6 +66,11 @@ class UserName extends FlxSubState
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+		if (name.text == NULL)
+		{
+			FlxG.save.data.NickName = name.text = 'Player';
+		}
 
 		if (FlxG.keys.justPressed.ENTER)
 		{

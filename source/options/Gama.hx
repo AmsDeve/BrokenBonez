@@ -7,7 +7,7 @@ import flixel.util.FlxColor;
 
 class Gama extends FlxSubState
 {
-	var percentaje:Float = 0;
+	var percentaje:Float = 100;
 	var bgBrightness:FlxSprite;
 	var coolText:FlxText;
 
