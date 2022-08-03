@@ -23,7 +23,7 @@ class UserName extends FlxSubState
 		bg.alpha = 0.7;
 		add(bg);
 
-		var coolText = new FlxText(0, 100, 'Choose your name\n&\nPress Enter to set', 40);
+		var coolText = new FlxText(0, 100, 'Choose your name\nPress Enter to set', 40);
 		coolText.screenCenter(X);
 		add(coolText);
 
@@ -67,19 +67,25 @@ class UserName extends FlxSubState
 	{
 		super.update(elapsed);
 
-		if (name.text == NULL)
-		{
-			FlxG.save.data.NickName = name.text = 'Player';
-		}
-
 		if (FlxG.keys.justPressed.ENTER)
 		{
 			FlxG.save.data.NickName = name.text;
+			close();
 		}
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
 			close();
+		}
+
+		if (name.text == '' && FlxG.keys.justPressed.ESCAPE)
+		{
+			FlxG.save.data.NickName = name.text = 'Player';
+		}
+
+		if (name.text == '' && FlxG.keys.justPressed.ENTER)
+		{
+			FlxG.save.data.NickName = name.text = 'Player';
 		}
 	}
 }

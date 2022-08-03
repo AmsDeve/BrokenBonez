@@ -45,14 +45,13 @@ class PlayState extends FlxState
 		sun.loadGraphic(Paths.image('sol'));
 		stageGrp.add(sun);
 
-		player = new BykePlayer(0, -400);
+		player = new BykePlayer(0, -450);
 		add(player);
 
 		grass = new FlxSprite(0, 50);
 		grass.loadGraphic(Paths.image('grass'));
 		grass.screenCenter(X);
 		grass.immovable = true;
-		grass.updateHitbox();
 		stageGrp.add(grass);
 
 		FlxG.camera.follow(player, TOPDOWN, 1);
@@ -71,7 +70,7 @@ class PlayState extends FlxState
 
 		if (FlxG.keys.justPressed.ENTER)
 		{
-			openSubState(new Pause(player.getScreenPosition().x, player.getScreenPosition().y));
+			openSubState(new Pause());
 		}
 	}
 }
